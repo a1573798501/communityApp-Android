@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_register"
+    tools:context=".ui.user.RegisterActivity">
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/register_cardview"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="80dp"
+    android:layout_marginRight="40dp"
+    android:layout_marginLeft="40dp"
+    app:cardCornerRadius="@dimen/dp_15">
+    <ImageView
+        android:id="@+id/register_avatar"
+        android:layout_width="match_parent"
+        android:scaleType="fitXY"
+        android:layout_height="250dp"
+        android:src="@mipmap/timg"/>
+</androidx.cardview.widget.CardView>
+
+    <EditText
+        app:layout_constraintTop_toBottomOf="@id/register_cardview"
+        android:id="@+id/register_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:hint="@string/user_name_input_hint"
+        android:textColorHint="@color/userNameInputTextHintColor"
+        android:textColor="@color/userNameInputTextColor"
+        android:textSize="15sp"
+        android:maxLength="30"
+        android:paddingLeft="15dp"
+        android:background="@drawable/bg_register_user_name_edit"/>
+
+
+    <EditText
+        app:layout_constraintTop_toBottomOf="@id/register_user_name"
+        android:id="@+id/register_user_email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/user_email_input_hint"
+        android:textColorHint="@color/userNameInputTextHintColor"
+        android:textColor="@color/userNameInputTextColor"
+        android:textSize="15sp"
+        android:maxLength="30"
+        android:paddingLeft="15dp"
+        android:background="@drawable/bg_register_user_name_edit"/>
+
+
+    <EditText
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/register_user_email"
+        android:id="@+id/register_user_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/user_password_input_hint"
+        android:textColorHint="@color/userNameInputTextHintColor"
+        android:textColor="@color/userNameInputTextColor"
+        android:textSize="15sp"
+        android:maxLength="30"
+        android:paddingLeft="15dp"
+        android:background="@drawable/bg_register_user_name_edit"/>
+
+    <Button
+        android:id="@+id/register_user_button"
+        app:layout_constraintTop_toBottomOf="@+id/register_user_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textColor="@android:color/white"
+        android:text="@string/user_register_button"
+        android:background="@drawable/bg_register_button"/>
+
+    <TextView
+        android:textSize="13sp"
+        android:id="@+id/register_user_login_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="20dp"
+        android:text="@string/user_login_text_view"
+        android:textColor="@android:color/white"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
